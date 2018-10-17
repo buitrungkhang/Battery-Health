@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:title="@string/app_name"
+            android:state_checked="true"
+            android:color="@color/colorPrimary" />
+    <item
+            android:title="@string/app_name"
+            android:state_checked="false"
+            android:color="@color/grey" />
+
+    <item
+            android:title="@string/app_name"
+            android:state_checked="false"
+            android:color="@color/grey" />
+</menu>
