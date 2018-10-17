@@ -7,10 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.btk.android.batteryhealth.R
+import javax.inject.Inject
 
 class HomeFragment : Fragment() {
-
-    private var mViewModel: HomeViewModel? = null
+    @Inject
+    lateinit var mViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
