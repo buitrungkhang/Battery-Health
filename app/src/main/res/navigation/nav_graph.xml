@@ -7,7 +7,12 @@
     <fragment android:id="@+id/homeFragment" android:name="com.btk.android.batteryhealth.ui.home.HomeFragment"
               android:label="fragment_home" tools:layout="@layout/fragment_home"/>
     <fragment android:id="@+id/splashFragment" android:name="com.btk.android.batteryhealth.ui.splash.SplashFragment"
-              android:label="fragment_splash" tools:layout="@layout/fragment_splash"/>
+              android:label="fragment_splash" tools:layout="@layout/fragment_splash">
+        <action android:id="@+id/action_splashFragment_to_homeFragment" app:destination="@id/homeFragment"
+                app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim"
+                app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim"
+                app:popUpTo="@+id/nav_graph"/>
+    </fragment>
     <fragment android:id="@+id/historyFragment" android:name="com.btk.android.batteryhealth.ui.history.HistoryFragment"
               android:label="fragment_history" tools:layout="@layout/fragment_history"/>
     <fragment android:id="@+id/realtimeFragment"

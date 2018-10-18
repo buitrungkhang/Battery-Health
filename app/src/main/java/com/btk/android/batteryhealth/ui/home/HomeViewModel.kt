@@ -2,13 +2,18 @@ package com.btk.android.batteryhealth.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import org.greenrobot.eventbus.EventBus
 import javax.inject.Inject
 
-class HomeViewModel @Inject constructor(): ViewModel() {
+class HomeViewModel @Inject constructor() : ViewModel() {
     val batteryPercent: MutableLiveData<Float> = MutableLiveData()
 
-    fun start() {
+    lateinit var navigator: HomeNavigator
 
+    fun start() {
+        batteryPercent.postValue(0f)
+    }
+
+    fun updateBatteryChange(batteryPer: Float) = {
+        batteryPercent.postValue(batteryPer)
     }
 }
